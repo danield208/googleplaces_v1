@@ -1,5 +1,5 @@
 import express from "express"
-const port = 3000
+const port = 4000
 export const server = express()
 
 server.listen(port, ()=>{
