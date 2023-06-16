@@ -1,0 +1,19 @@
+{
+  "name": "googleplaces-nodejs",
+  "version": "0.0.0",
+  "description": "googleplacesNodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon .",
+    "start": "node ."
+  },
+  "author": "Daniel",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "superagent": "^8.0.9"
+  }
+}
