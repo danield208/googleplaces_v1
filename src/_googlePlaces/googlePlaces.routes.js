@@ -6,10 +6,12 @@ export const gpRoutes = express.Router()
 const apiKey = "AIzaSyAyJrRpDMXMHjm3nAIJS7x02D2nPT9E9Kk";
 
 gpRoutes.route("/placeInfo").get(async (req, result)=>{
-    const cityname = JSON.stringify(req.headers.locationname)
-    let placeInfo = await getPlaceInfo(cityname)
-    let placeImage = await getPlacePicture(placeInfo.body.candidates[0].photos[0].photo_reference)
-    result.send(placeImage.body)
+    const cityname = JSON.stringify(req.headers.locationname);
+    let placeInfo = await getPlaceInfo(cityname);
+    console.log(placeInfo);
+    let placeImage = await getPlacePicture(placeInfo.body.candidates[0].photos[0].photo_reference);
+    console.log(placeImage);
+    result.send(placeImage.body);
 })
 
 async function getPlaceInfo(location) {

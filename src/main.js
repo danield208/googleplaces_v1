@@ -10,6 +10,10 @@ server.use("/public", express.static('public'))
 //routes
 server.use("/googleplaces", gpRoutes)
 
+server.get("/", (req, res)=> {
+    res.send("Server Online :)")
+})
+
 //404 handler
 server.use((req, res)=>{
     res.status(404).json({
